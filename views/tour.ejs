@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- animate  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Style-css  -->
+    <link rel="stylesheet" href="/Stylesheet/style.css">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR  -->
+
+    <header class="main-header">
+        <div class="main-header__logo-container">
+
+            <h4 class="main-header__logo-text ">Company-Name</h4>
+        </div>
+        <nav class="main-header__navigation ">
+            <ul class="main-header__navigation-links  ">
+                <li class="main-header__navigation-link"><a href="/"><i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="main-header__navigation-link"><a href="/"> <i class="fa-solid fa-address-card"></i> About
+                    </a></li>
+
+                <li class="nav-item dropdown main-header__navigation-link">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-fill"></i> Form
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item main-header__navigation-link" href="/tour">Tour-Form</a></li>
+                        <li><a class="dropdown-item main-header__navigation-link" href="#">More-Form</a></li>
+                    </ul>
+                </li>
+
+                <li class="main-header__navigation-link"><a href="/" href=""><i class="fa-solid fa-address-book"></i>
+                        Contact </a></li>
+                <li class="nav-item dropdown main-header__navigation-link">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <!-- Font-Awesome  -->
+                        <i class="fa-regular fa-user"></i>
+                        <!-- EJS  -->
+                        <%= name %>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <form action="/logout?_method=DELETE" method="POST">
+                            <li><a class="dropdown-item main-header__navigation-link"><button type="submit">Log
+                                        Out</button></a></li>
+                        </form>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- FORM  -->
+
+    <div class="Form_container">
+        <div class="row m-2 title">
+            <div class="col-md-4 ">
+                <h1>Tour Settlement Form</h1>
+                <p>Tour Settlement Form, to be filled by Employee after or during Tour</p>
+            </div>
+
+            <!-- app.leonardo.ai/ai-generations  -->
+            <div class="col-md-7 mt-2 mb-4">
+                <img src="/images/img2.jpg" alt="external-form-uxui-design-flat-wichaiwi" />
+            </div>
+        </div>
+
+        <div class="Form_container_two">
+            <div class="Info_Form">
+                <h1>Please Fill In your Information</h1>
+
+
+                <form method="POST" action="/tour">
+
+                    <div class="tour_btn">
+                        <div class="btn_submit ">
+                            <input type="submit" value="Submit"
+                                class="btn  animate__animated animate__fadeInLeft ml-3" />
+
+                            <div class="btn_go_back  animate__animated animate__fadeInLeft">
+                                <a href="/"> <button>Go back</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Info_section">
+                        <div class="Tour_form">
+                            <div class="Form_info_container_one mt-5">
+                                <h3>Your Full Name</h3>
+                                <input type="text" name="Consumer_name" placeholder="Entre Your Full Name" id="">
+                                <h3>Bill Entre Date</h3>
+                                <input type="datetime-local" name="Bill_Entry_date" id="Bill_number"  min="2000-01-01" max="2100-12-31">
+                            </div>
+
+
+                            <div class="Form_info_container_two ">
+                                <div class="Info_data">
+                                    <h3>Project Name</h3>
+                                    <h3>Customer Name</h3>
+                                    <h3>Project Location</h3>
+                                </div>
+
+
+                                <div class="input_area_text">
+                                    <div class="input_area">
+                                        <input type="text" name="Project_name" placeholder="Project Name" id="">
+                                    </div>
+                                    <div class="input_area">
+                                        <input type="text" name="Customer_Name" placeholder="Entre Customer Name">
+                                    </div>
+                                    <div class="input_area">
+                                        <input type="text" name="Project_location" placeholder="Project Location">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Form_info_container_three mt-2">
+                                <div class="Order_number">
+                                    <h3>Old Sequence Number<i>(optional)</i></h3>
+                                    <h3>Work Order Number</h3>
+                                </div>
+
+
+                                <div class="input_area_text">
+                                    <div class="input_area_Number">
+                                        <input type="number" name="Old_sequence_number"
+                                            placeholder="Entre Sequence Number" id="">
+                                    </div>
+                                    <div class="input_area_Number">
+                                        <input type="Work_Order_number" name="Work_Order_Number" placeholder="Work Order Number">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="Form_info_container_four mt-2">
+                                <div class="Tour_Date">
+                                    <h3>Tour Start Date-Time</h3>
+                                    <h3>Tour End Date-Time</h3>
+                                </div>
+
+                                <div class="input_area_text">
+                                    <div class="input_area_date">
+                                        <input type="datetime-local" name="Start_date" min="2000-01-01" max="2100-12-31">
+                                    </div>
+                                    <div class="input_area_date">
+                                        <input type="datetime-local" name="End_date" min="2000-01-01" max="2100-12-31">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- bootstrap js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
