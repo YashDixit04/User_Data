@@ -421,10 +421,12 @@ a {
     box-shadow: 1rem 1rem 1.6rem #ab7cda;
   
   }
-  
+.btn_go_back{
+  position: fixed;
+}
   .btn_go_back button {
-    width: 80%;
-    padding: 4px;
+    width: 28rem;
+    margin-left: 29px;
     margin-top: 10px;
     transition: all 0.4s ease;
     background-color: #6247aa;
